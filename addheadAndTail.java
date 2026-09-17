@@ -89,6 +89,14 @@ class add{
      }
      System.out.println();
     }
+
+    void deleteIndex(int id){
+         Node temp = head;
+         for (int i = 0; i<id-1; i++){
+            temp = temp.next;
+         }
+          temp.next = temp.next.next;
+    }
 }
 
 
@@ -107,6 +115,8 @@ public static void main(String[] args) {
         ll.insert(80,1);
         ll.print();
         System.out.println(ll.get(3));
+        ll.deleteIndex(2);
+        ll.print();
            
     }
 }
