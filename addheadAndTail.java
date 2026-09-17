@@ -71,7 +71,13 @@ class add{
         size--;
     }
 
-    
+    int get(int idx){
+        Node temp = head;
+        for (int i=0; i<idx;i++){
+            temp = temp.next;
+        }
+        return temp.vel;
+    }
 
      void print(){
     if (head == null ) return ;
@@ -100,6 +106,7 @@ public static void main(String[] args) {
         //   System.out.println( ll.find(200));
         ll.insert(80,1);
         ll.print();
+        System.out.println(ll.get(3));
            
     }
 }
