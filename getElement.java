@@ -1,6 +1,3 @@
-
-
-
 class Node {
 int vel;
 Node next;
@@ -22,9 +19,9 @@ public class getElement{
     public static int get(Node head, int idx){
        Node temp = head;
        for(int i = 0; i<=idx; i++){
-        head = temp.next;
+        temp = temp.next;
        }
-       return head.vel;
+       return temp.vel;
     }
 
     public static void main(String[] args) {
