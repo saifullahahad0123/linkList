@@ -11,6 +11,7 @@ class add{
 
     Node head;
     Node tail;
+    int size;
      void addAthead(int vel){
         Node temp = new Node(vel);
         if(head == null) head = tail = temp;
@@ -18,6 +19,7 @@ class add{
         temp.next = head;
          head = temp;
         }
+        size++;
     }
      void addAttail(int vel){
         Node temp = new Node(vel);
@@ -26,6 +28,19 @@ class add{
         tail.next = temp;
          tail = temp;
         }
+        size++;
+    }
+
+    void delete(){
+        if (head == null ){
+            System.out.println("node is empty");
+            return ;
+        }
+        head = head.next;
+        if(head == null){
+            tail = null;
+        }
+        size--;
     }
 
      void print(){
@@ -54,7 +69,8 @@ public class addheadAndTail{
           ll.print();
           ll.addAthead(30);
             ll.print();
-            
+           System.out.println(ll.size); 
+
            
     }
 }
