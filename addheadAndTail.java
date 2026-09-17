@@ -12,6 +12,18 @@ class add{
     Node head;
     Node tail;
     int size;
+
+    int find(int vel){
+        if (head == null) return -1;
+        Node temp = head;
+        while (temp!=null) {
+            if (temp.vel == vel) return 1;
+           temp = temp.next;
+        } 
+        return -1;
+
+    }
+
      void addAthead(int vel){
         Node temp = new Node(vel);
         if(head == null) head = tail = temp;
@@ -43,6 +55,8 @@ class add{
         size--;
     }
 
+    
+
      void print(){
     if (head == null ) return ;
      Node temp = head;
@@ -57,10 +71,7 @@ class add{
 
 
 public class addheadAndTail{
-
-
-
-       public static void main(String[] args) {
+public static void main(String[] args) {
 
         add ll = new add();
         ll.addAttail(10);
@@ -70,7 +81,7 @@ public class addheadAndTail{
           ll.addAthead(30);
             ll.print();
            System.out.println(ll.size); 
-
+          System.err.println( ll.find(200));
            
     }
 }
