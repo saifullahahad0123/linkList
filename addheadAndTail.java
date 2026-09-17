@@ -24,6 +24,22 @@ class add{
 
     }
 
+    void insert(int vel, int idx){
+        if (idx<0 || idx > size){ System.out.print("invalid index");}
+        else if(idx==0) addAthead(vel);
+        else if (idx == size) addAttail(vel);
+        else{
+            Node temp = head;
+            for(int i = 0; i<= idx-1; i++){
+                temp = temp.next;
+            }
+            Node t = new Node(vel);
+            t.next = temp.next;
+            temp.next = t;
+            size++;
+        }
+    }
+
      void addAthead(int vel){
         Node temp = new Node(vel);
         if(head == null) head = tail = temp;
@@ -80,8 +96,10 @@ public static void main(String[] args) {
           ll.print();
           ll.addAthead(30);
             ll.print();
-           System.out.println(ll.size); 
-          System.err.println( ll.find(200));
+        //    System.out.println(ll.size); 
+        //   System.out.println( ll.find(200));
+        ll.insert(80,1);
+        ll.print();
            
     }
 }
