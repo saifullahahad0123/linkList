@@ -21,7 +21,7 @@ class add{
      }
         System.out.println(temp.vel);
 }}
-public class linklist {
+public class middle {
     
 
     public static void main(String[] args) {

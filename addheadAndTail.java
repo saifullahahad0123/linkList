@@ -91,12 +91,24 @@ class add{
     }
 
     void deleteIndex(int id){
+        if(id<0 || id>size){
+            System.out.print("Invalid index");
+
+        }
+        else if(id==0){
+            delete();
+            return ;
+        }
+        else{
          Node temp = head;
          for (int i = 0; i<id-1; i++){
             temp = temp.next;
          }
           temp.next = temp.next.next;
-    }
+          if(id == size-1)
+            tail = temp;
+        size--;
+    }}
 }
 
 
