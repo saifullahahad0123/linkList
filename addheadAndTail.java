@@ -115,7 +115,7 @@ class add{
 public class addheadAndTail{
 public static void main(String[] args) {
 
-        add ll = new add();
+        addlinked ll = new addlinked();
         ll.addAttail(10);
          ll.addAttail(20);
           ll.addAttail(30);
